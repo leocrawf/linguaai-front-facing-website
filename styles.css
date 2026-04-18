@@ -170,8 +170,8 @@ body {
 
 /* ── Pricing ────────────────────────────────────────────── */
 .pricing { background: var(--surface); }
-.pricing-cards { display: flex; justify-content: center; }
-.pricing-card { max-width: 380px; width: 100%; position: relative; padding-top: 36px; }
+.pricing-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.pricing-card { width: 100%; position: relative; padding-top: 36px; }
 .pricing-card.featured { border-color: var(--accent); }
 .featured-badge {
   position: absolute;
@@ -189,8 +189,14 @@ body {
   white-space: nowrap;
 }
 .pricing-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 12px; }
-.price { font-size: 48px; font-weight: 800; color: var(--accent); margin-bottom: 24px; }
-.price span { font-size: 18px; color: var(--text-secondary); font-weight: 400; }
+.price-period {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 24px;
+}
 .feature-list { list-style: none; margin-bottom: 28px; }
 .feature-list li {
   padding: 10px 0;
@@ -341,6 +347,7 @@ body {
 
   .section-title { font-size: 28px; }
   .features-grid { grid-template-columns: 1fr; }
+  .pricing-cards { grid-template-columns: 1fr; }
 
   .footer-inner { flex-direction: column; text-align: center; }
 }
