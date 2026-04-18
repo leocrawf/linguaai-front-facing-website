@@ -1,5 +1,5 @@
-var RECAPTCHA_SITE_KEY = 'YOUR_RECAPTCHA_SITE_KEY';
-var CONVEX_DELETE_URL = 'YOUR_CONVEX_SITE_URL/delete-account';
+var RECAPTCHA_SITE_KEY = '6LdZYL4sAAAAAPjYYkjU3W5v4h1ZeL_mURCwB_Of';
+var CONVEX_DELETE_URL = 'https://adventurous-mouse-422.convex.site/delete-account';
 
 document.getElementById('delete-form').addEventListener('submit', function (e) {
   e.preventDefault();
