@@ -4,7 +4,7 @@ var CONVEX_DELETE_URL = 'https://adventurous-mouse-422.convex.site/delete-accoun
 document.getElementById('delete-form').addEventListener('submit', function (e) {
   e.preventDefault();
 
-  var email = document.getElementById('email').value.trim();
+  var email = document.getElementById('email').value.trim().toLowerCase();
   var submitBtn = document.getElementById('submit-btn');
   var messageEl = document.getElementById('form-message');
 
