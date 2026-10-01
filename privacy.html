@@ -28,7 +28,7 @@
 
   <main class="legal-content">
     <h1>Privacy Policy</h1>
-    <span class="last-updated">Last Updated: September 8, 2026</span>
+    <span class="last-updated">Last Updated: October 1, 2026</span>
 
     <h2>1. Introduction</h2>
     <p>LinguaAI ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, store, and share information about you when you use the LinguaAI mobile application ("App") or visit our website ("Site"). By using the App or Site, you agree to the practices described in this Privacy Policy.</p>
@@ -40,10 +40,11 @@
       <li><strong>Account Information:</strong> When you create an account, we collect your email address and name, provided through Clerk authentication. We may also store a profile image URL if you use a social login provider.</li>
       <li><strong>Learning Preferences:</strong> Your selected difficulty level (Beginner, Intermediate, Advanced), chosen topics, and learning preferences you set within the App.</li>
       <li><strong>Usage Data:</strong> Information about how you use the App, including lessons accessed, conversation frequency, session duration, and streak activity.</li>
-      <li><strong>Voice &amp; Conversation Data:</strong> When you begin a practice conversation, the App accesses your device's microphone and streams your speech to our AI voice provider so the tutor can respond. We store transcripts and metadata from these conversations to display your conversation history and improve the learning experience. The microphone is accessed only during an active conversation, never in the background.</li>
-      <li><strong>Payment Information:</strong> Your subscription status, plan name, and the transaction identifiers returned by the app store. Purchases are processed by the Apple App Store or Google Play — we never receive or store your payment card details.</li>
+      <li><strong>Voice &amp; Conversation Data:</strong> During an active practice conversation, and only after you have enabled AI consent, the App may send spoken audio, typed messages, speech transcripts, and conversation content to AI providers to provide tutoring, transcription, feedback, and audio. Spoken audio is sent to ElevenLabs for transcription; transcript and conversation text may be sent to Google Gemini for feedback in the legacy audio feature or to generate conversation titles. The App accesses your microphone only during an active conversation, never in the background. We store conversation records and, for the legacy audio feature, audio in Convex so you can use conversation history.</li>
+      <li><strong>Payment Information:</strong> Your subscription status, plan name, and the transaction identifiers returned by the relevant app store. We never receive or store your payment card details.</li>
       <li><strong>Push Notification Tokens:</strong> If you allow notifications, we store the push token issued for your device along with its platform (iOS or Android), so we can send practice and streak reminders. You can revoke this at any time in your device settings.</li>
       <li><strong>Usage Count Data:</strong> Records of daily AI conversation usage to enforce subscription plan limits.</li>
+      <li><strong>AI Conversation Context:</strong> When AI consent is enabled, the information sent to ElevenLabs for voice tutoring may include your account identifier, display name, and Spanish difficulty level, along with spoken audio, typed messages, transcripts, and conversation context. Transcript and conversation text—not raw microphone audio—may be sent to Google Gemini for legacy tutor feedback or to create conversation titles.</li>
       <li><strong>Device Information:</strong> General device type and operating system version, collected automatically for performance and compatibility purposes.</li>
       <li><strong>Diagnostic &amp; Crash Data:</strong> When the App crashes or encounters an error, we collect a diagnostic report through our error-monitoring provider. This includes the error itself, the sequence of screens leading up to it, your device model and operating system version, and app performance and stability measurements. These reports include the identifier of the signed-in account, so we can tell which account encountered a problem. They never include your lesson content, conversation transcripts, or voice recordings, and they are never used for advertising.</li>
       <li><strong>Account Deletion Requests:</strong> If you submit an account deletion request via the App or our Site, we record your email address, the request timestamp, and the status of the request.</li>
@@ -58,6 +59,7 @@
       <li>Track your learning progress, streaks, and conversation history;</li>
       <li>Enforce daily usage limits based on your subscription plan;</li>
       <li>Personalize your learning experience (e.g., remembering your difficulty level and topic preferences);</li>
+      <li>When you have enabled AI consent, send spoken audio and conversation information described above to ElevenLabs for voice tutoring, transcription, and audio, and send transcript and conversation text to Google Gemini for legacy tutor feedback or to generate conversation titles. The legacy audio feature sends audio to ElevenLabs, not Google Gemini;</li>
       <li>Send push notifications such as practice and streak reminders, where you have allowed them;</li>
       <li>Respond to support requests and account deletion requests;</li>
       <li>Detect, prevent, and address technical issues, fraud, or abuse;</li>
@@ -73,16 +75,19 @@
         <strong>Clerk</strong> (<a href="https://clerk.com/privacy" target="_blank" rel="noopener noreferrer">clerk.com/privacy</a>): Manages user authentication, account creation, and session management. Clerk processes your email address and name on our behalf.
       </li>
       <li>
-        <strong>ElevenLabs</strong> (<a href="https://elevenlabs.io/privacy" target="_blank" rel="noopener noreferrer">elevenlabs.io/privacy</a>): Powers AI voice conversations within the App. Your voice input and conversation data are processed by ElevenLabs to generate AI responses. Conversation transcripts and metadata may be stored by ElevenLabs in accordance with their policies.
+        <strong>ElevenLabs</strong> (<a href="https://elevenlabs.io/privacy" target="_blank" rel="noopener noreferrer">elevenlabs.io/privacy</a>; <a href="https://elevenlabs.io/dpa" target="_blank" rel="noopener noreferrer">Data Processing Addendum</a>): When AI consent is enabled, ElevenLabs receives spoken audio, typed text, speech and conversation transcripts, conversation content, your account identifier, display name, and Spanish difficulty. It uses these inputs to provide voice tutoring, transcription, audio, and conversation history, including text-to-speech and audio for the legacy audio feature. Its processing and safeguards are governed by its applicable terms and DPA; the DPA applies to self-serve services under its terms.
       </li>
       <li>
-        <strong>Convex</strong> (<a href="https://www.convex.dev/privacy" target="_blank" rel="noopener noreferrer">convex.dev/privacy</a>): Our backend database and serverless infrastructure provider. All app data — including your account details, learning progress, conversation history, and usage records — is stored securely on Convex's infrastructure.
+        <strong>LiveKit</strong> (<a href="https://livekit.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">livekit.com/legal/privacy-policy</a>): Provides the real-time audio transport for the voice tutor. When AI consent is enabled and a conversation is active, your spoken audio and the tutor&rsquo;s replies travel over LiveKit&rsquo;s WebRTC infrastructure to and from ElevenLabs. The session is established with a token issued by ElevenLabs, and LiveKit carries the audio only for the duration of that conversation. It is not used outside an active conversation.
       </li>
       <li>
-        <strong>Google Gemini</strong> (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>): Generates lesson content, translations, and the text used for pronunciation audio. The words and phrases from your lessons may be sent to Gemini for this purpose.
+        <strong>Convex</strong> (<a href="https://www.convex.dev/privacy" target="_blank" rel="noopener noreferrer">convex.dev/privacy</a>): Our backend database and serverless infrastructure provider. It stores app data including your account details, learning progress, conversation records, usage records, and audio associated with the legacy audio feature.
       </li>
       <li>
-        <strong>Apple App Store</strong> (<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">apple.com/legal/privacy</a>) and <strong>Google Play</strong> (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>): Process subscription purchases and renewals, and deliver push notifications to your device. We receive only your subscription status and transaction identifiers from them — never your payment card details.
+        <strong>Google Gemini</strong> (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>; <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener noreferrer">Gemini API Terms</a>; <a href="https://cloud.google.com/terms/data-processing-addendum" target="_blank" rel="noopener noreferrer">Data Processing Addendum</a>): When AI consent is enabled, transcript and conversation text may be sent to generate conversation titles; the legacy audio feature may send transcripts and conversation context for feedback, but not raw microphone audio. The app also sends lesson and phrase text for translation and instructional content features. We use the Gemini API through an account with active billing. Google's terms for paid services state that prompts and responses are not used to improve its products, while allowing limited prompt/response safety logging. Processing, safeguards, and any retention are governed by the applicable terms and processing addendum; we do not state a specific retention period.
+      </li>
+      <li>
+        <strong>Apple App Store</strong> (<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">apple.com/legal/privacy</a>): Processes subscription purchases and renewals. We receive only your subscription status and transaction identifiers — never your payment card details.
       </li>
       <li>
         <strong>Expo</strong> (<a href="https://expo.dev/privacy" target="_blank" rel="noopener noreferrer">expo.dev/privacy</a>): Delivers our push notifications to your device through Apple's and Google's notification services, and distributes app updates. Expo processes your device push token on our behalf.
@@ -96,13 +101,14 @@
     </ul>
 
     <h2>5. Data Retention</h2>
-    <p>We retain your personal information for as long as your account is active or as needed to provide you with the App's services. Specifically:</p>
+    <p>LinguaAI retains your personal information for as long as your account is active or as needed to provide the App's services. Specifically:</p>
     <ul>
       <li>Account information is retained until your account is deleted;</li>
-      <li>Conversation history and learning progress data are retained to provide the history and progress tracking features;</li>
+      <li>Conversation records, legacy audio stored in Convex, and learning progress are retained to provide conversation history and progress tracking;</li>
       <li>Payment records are retained as required by applicable financial regulations;</li>
-      <li>Upon account deletion, your personal data will be permanently deleted from our systems within 30 days of the deletion request being processed. Some data may be retained in anonymized, aggregated form for analytics purposes.</li>
+      <li>Upon account deletion, your personal data will be deleted from LinguaAI's systems within 30 days after the deletion request is processed. Data already sent to third-party AI providers is handled under their applicable linked terms and processing agreements; we do not promise a specific provider retention period or that turning off AI consent deletes data already sent. Some data may be retained in anonymized, aggregated form for analytics purposes.</li>
     </ul>
+    <p>Turning AI consent off stops future AI provider calls but does not delete conversation or audio records already stored by LinguaAI in Convex, or data already sent to providers.</p>
 
     <h2>6. Your Rights &amp; Choices</h2>
     <p>Depending on your location, you may have the following rights regarding your personal data:</p>
@@ -112,6 +118,7 @@
       <li><strong>Deletion:</strong> Request that we delete your account and associated personal data. You can submit a deletion request through the App's settings or via the <a href="index.html#delete-account">account deletion form</a> on our Site;</li>
       <li><strong>Portability:</strong> Request a portable copy of your data in a structured, machine-readable format;</li>
       <li><strong>Objection / Restriction:</strong> Object to or request restriction of certain processing activities where permitted by applicable law;</li>
+      <li><strong>AI Consent:</strong> AI consent is an account-level preference and is off by default, including when no preference has been saved. When it is off, the App blocks future calls to AI providers, so features that rely on those calls may be unavailable. You can change this preference in the App. Turning it off does not delete data already sent to providers or conversation and legacy audio records already stored by LinguaAI in Convex; request account deletion to delete your data from LinguaAI's systems under the process described above.</li>
       <li><strong>Notifications:</strong> Turn push notifications off at any time in your device settings or in the App's notification preferences. Doing so does not affect your account or subscription.</li>
     </ul>
     <p>To exercise any of these rights, please contact us at <a href="mailto:daleyshavon22@gmail.com">daleyshavon22@gmail.com</a>. We will respond to your request within 30 days.</p>
